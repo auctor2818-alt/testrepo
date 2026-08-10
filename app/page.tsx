@@ -1,15 +1,16 @@
 'use client';
 
-import { 
-  Bot, 
-  Plus, 
-  RefreshCw, 
-  GitPullRequest, 
-  CheckCircle2, 
-  AlertTriangle, 
-  Clock, 
-  Search, 
-  Filter 
+import {
+  Bot,
+  Plus,
+  RefreshCw,
+  GitPullRequest,
+  CheckCircle2,
+  AlertTriangle,
+  Clock,
+  Search,
+  Filter,
+  Sparkles
 } from 'lucide-react';
 import JobList from '@/components/JobList';
 
@@ -67,6 +68,37 @@ export default function HomePage() {
 
       {/* Main content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
+        <section className="mb-8 rounded-2xl border border-[var(--color-accent-blue)]/20 bg-gradient-to-r from-[var(--color-accent-blue)]/15 via-[var(--color-surface)] to-[var(--color-accent-cyan)]/10 p-6 shadow-lg shadow-[var(--color-accent-blue)]/5">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div className="flex items-start gap-4">
+              <div className="rounded-xl bg-[var(--color-accent-blue)]/15 p-3 text-[var(--color-accent-cyan)]">
+                <Sparkles size={22} />
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--color-accent-cyan)]">
+                  Review cockpit
+                </p>
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-[var(--color-foreground)]">
+                  Ship cleaner pull requests with AI triage.
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--color-foreground-muted)]">
+                  Prioritize risky changes, watch review progress, and keep merge queues moving from one focused dashboard.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 text-sm md:min-w-64">
+              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-4">
+                <p className="text-[var(--color-foreground-muted)]">Avg. review time</p>
+                <p className="mt-1 text-2xl font-bold text-[var(--color-foreground)]">6m</p>
+              </div>
+              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-4">
+                <p className="text-[var(--color-foreground-muted)]">Queue health</p>
+                <p className="mt-1 text-2xl font-bold text-[var(--color-accent-emerald)]">92%</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Page Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
